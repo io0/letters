@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title></title>
+<head>
+    <title>Steve-Marley</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,44 +11,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <style>
-      body {
-        margin: 10vw 30vw;
-        /* font-family: Jost, "Helvetica Neue", Helvetica, Arial, sans-serif; */
-        font-weight: 400;
-        background-color: rgb(17, 16, 22);
-        color: rgb(158, 158, 158);
-        line-height: 1.5;
-      }
+        /* Style of captions, headers, text*/
+        body {
+            margin: 10vw 30vw;
+            /* font-family: Jost, "Helvetica Neue", Helvetica, Arial, sans-serif; */
+            font-weight: 400;
+            background-color: rgb(25,10,15);
+            transition: background-color 0.5s;
+            color: rgb(158, 158, 158);
+            transition: color 0.5s;
+            line-height: 1.5;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            /* font-family: Permanent Marker; */
+            color: rgb(207, 207, 207);
+            font-style: italic;
+        }
+        figcaption {
+            text-align: center;
+            /* font-size: 13px; */
+            font-family: Permanent Marker;
+            color: rgb(207, 207, 207);
+            padding: 5px;
+        }
+        h2 {
+            color: rgb(205, 204, 204);
+            font-size: 16px;
+        }
 
-      h1 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        /* font-family: Permanent Marker; */
-        color: rgb(207, 207, 207);
-        font-style: italic;
-      }
-      figcaption {
-        text-align: center;
-        /* font-size: 13px; */
-        font-family: Permanent Marker;
-        color: rgb(207, 207, 207);
-        padding: 5px;
-      }
-      h2 {
-        color: rgb(205, 204, 204);
-        font-size: 16px;
-      }
+        p {
+            font-size: 16px;
+            /* margin-bottom: 10px; */
+        }
 
-      p {
-        font-size: 16px;
-        /* margin-bottom: 10px; */
-      }
+        /* Style of the switch */
+        .switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #D03621;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: rgb(17, 16, 22);
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        .slider.round {
+            border-radius: 34px;
+        }
+        .slider.round::before {
+            border-radius: 50%;
+        }
+
+        /* Journal switch*/
+        .journal {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+        .active {
+            display: block;
+        }
     </style>
-  </head>
-  <body>
-    <div
-      class="space-y-6 mt-8 md:mt-24 p-9 md:p-0 max-w-lg mx-auto relative leading-normal mb-44"
-    >
+</head>
+<body>
+    <!-- Steve -->
+    <div id="journal1" class="journal active space-y-6 mt-8 md:mt-24 p-9 md:p-0 max-w-lg mx-auto relative leading-normal mb-44">
+        <h1>Jan 7, 2024</h1>
+        <p>
+            I'm in New York. Spent the day with Andrew. He brought me round the 
+            East side, and then we crossed the bridge to that island. We watched 
+            an incredibly interesting, low-budget Russian movie from the 90s about 
+            Russian gangs in the 90s for about 30 mins. Then we had Chinese food 
+            with Glenn, Katherin (Li), and Andrew. 
+        </p>
+        <p>
+            It's sad to say that I felt more welcomed and appreciated by these 
+            wonderful acquaintances than by my own brothers and dad. 
+        </p>
+        <p>
+            Yesterday, on the plane ride, I read Vanity Fair. I'm only halfway. 
+            450 pages to go.
+        </p>
+
+        <h1>Jan 10, 2024</h1>
+        <p>
+            12h train journey back to montreal. My seat was comfortable. I read Vanity 
+            Fair. The views were gorgeous.
+        </p>
+        <div class="grid grid-cols-7 mb-[!-20px]">
+            <div class="col-span-2">
+                <img 
+                    class="h-full w-full object-cover"
+                    src="https://s3.us-east-2.amazonaws.com/images.montreal.2024/IMG_7651.JPG" 
+                />
+            </div>
+            <div class="col-span-5">
+                <img 
+                    class="h-full w-full object-cover"
+                    src="https://s3.us-east-2.amazonaws.com/images.montreal.2024/IMG_7657.JPG"
+                />
+            </div>
+        </div>
+        <figcaption>Trainride to Montreal</figcaption>
+        <h1>Friday Jan 12, 2024</h1>
+        <p>
+            Couldn't sleep. Thoughts and allergens kept me up. 
+            Tomorow I'm going to spend the whole fucking day in service of a good 
+            night's sleep. I'm going to buy a hoover and hoover everything. I'm 
+            going to wash my clothes. I'm going to starve and kill mites—perhaps 
+            I'll take my sheets to a laundromat. 
+        </p>
+        <h1>Sunday Jan 14, 2024</h1>
+        <p>
+        More cleaning, tidying. I called J and Dad, and felt coldly towards 
+        them. We hung up without having said much. I didn't have much to say. 
+        </p>
+        <p>
+            Had coffee with Emma, started reading club, we're going to meet 
+            next Saturday to discuss Stewart Brand's essay on maintenance. 
+        </p>
+        <p>
+            <i>Picture of that day, taken with Pentax, of Emma in coffee store.</i>
+        </p>
+        <h1>Wed Jan 17, 2024</h1>
+        <p>
+            Went to counselling with Maga-Li. It was quite astounding. I feel like a 
+            tender little lamb. It's such an alien feeling. I'm a little sad but 
+            the bitterness has gone, at least temporarily, and 
+            has been replaced with tenderness.
+        </p>
+        <p>I bought a peace lilly. </p>
+        <div class="w-[50%]">
+        <img 
+            src="https://s3.us-east-2.amazonaws.com/images.montreal.2024/Screenshot+2024-01-18+at+8.25.43+PM.png"
+        />
+        </div>
+        <h1>Thursday Jan 18, 2024</h1>
+        <p>
+            I awoke, unable to get out of bed. My lungs felt saturated with mucus
+            and my body was stiff as a board. I had a fever last night. 
+            I would relate to you the details of my day, and how I lugubriously 
+            dragged my body over to the clinic, which was shut, but I don't want to
+            bore you. Lets just wait for a more exciting day. 
+        </p>
+        <p>
+            I'm anticipating that the comming few weeks and year will read like 
+            a story of triumpf and success as quality of life and interestingness 
+            increase monotonically. First my 
+            health, then my <i>gatungswesen</i> will to flourish. 
+        </p>
+        <div class="w-[50%]">
+        <img 
+            src="https://s3.us-east-2.amazonaws.com/images.montreal.2024/Screenshot+2024-01-18+at+9.48.17+PM.png"
+        />
+        </div>
+    </div>
+
+    <!-- Marley -->
+    <div id="journal2" class="journal space-y-6 mt-8 md:mt-24 p-9 md:p-0 max-w-lg mx-auto relative leading-normal mb-44">
       <h1>Jan 7, 2024</h1>
       <p>
         I discovered Moebius today. Florent's dad is an art collector; there's
@@ -212,5 +375,42 @@
         </div>
       </div>
     </div>
-  </body>
+
+    
+    <!-- <button id="toggleButton">Toggle Journal</button> -->
+    <label class="switch">
+        <input type="checkbox" id="journalToggle">
+        <span class="slider round"></span>
+    </label>
+    
+
+    <script>
+        var scrollPosition1 = 0;
+        var scrollPosition2 = 0;
+
+        document.getElementById('journalToggle').addEventListener('change', function() {
+            var journal1 = document.getElementById('journal1');
+            var journal2 = document.getElementById('journal2');
+            console.log(scrollPosition1);
+            console.log(scrollPosition2);
+            if (journal1.classList.contains('active')) {
+                // switch from Steve to Marley
+                scrollPosition1 = document.documentElement.scrollTop;
+                journal1.classList.remove('active');
+                journal2.classList.add('active');
+                document.body.style.backgroundColor = "rgb(17,16,22)"; // background color
+                document.body.style.color = "rgb(158, 158, 158)";
+                document.documentElement.scrollTop = scrollPosition2;
+            } else {
+                // switch from Marley to Steve
+                scrollPosition2 = document.documentElement.scrollTop;
+                journal2.classList.remove('active');
+                journal1.classList.add('active');
+                document.body.style.backgroundColor = "rgb(25,10,15)"; // background color
+                // document.body.style.color = "rgb(30,30,30)"; // text color
+                document.documentElement.scrollTop = scrollPosition1;
+            }
+        });
+    </script>
+</body>
 </html>
