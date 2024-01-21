@@ -16,7 +16,7 @@
         margin: 10vw 30vw;
         /* font-family: Jost, "Helvetica Neue", Helvetica, Arial, sans-serif; */
         font-weight: 400;
-        background-color: rgb(25, 10, 15);
+        background-color: rgb(17, 16, 22);
         transition: background-color 0.5s;
         color: rgb(158, 158, 158);
         transition: color 0.5s;
@@ -284,6 +284,22 @@
           />
         </div>
       </div>
+      <h1>Jan 18</h1>
+      <p>
+        Sent out paper for internal review. Fun barbeque at David's. Being
+        reintroduced to society.
+      </p>
+      <h1>Jan 19 · Friday</h1>
+      <p>
+        We worked with a new person today. Strangely felt like therapy, someone
+        trying to figure out your company and future. At the end, a feeling of
+        deep, peaceful exhaustion, of running out of words, a mind having tried
+        to do everything in one breath.
+      </p>
+      <p>
+        A bowl of soup at 10 pm was the perfect ending. Salty, warm, and lemony,
+        imbibed in one continuous conscious state.
+      </p>
     </div>
     <!-- Steve -->
     <div
@@ -446,11 +462,11 @@
       />
     </div>
 
-    <!-- <button id="toggleButton">Toggle Journal</button> -->
-    <label class="switch">
+    <button id="toggleButton">Toggle Journal</button>
+    <!-- <label class="switch">
       <input type="checkbox" id="journalToggle" />
       <span class="slider round"></span>
-    </label>
+    </label> -->
 
     <script>
       var scrollPosition1 = 0;
@@ -468,7 +484,7 @@
             scrollPosition1 = document.documentElement.scrollTop;
             journal1.classList.remove("active");
             journal2.classList.add("active");
-            document.body.style.backgroundColor = "rgb(17,16,22)"; // background color
+            document.body.style.backgroundColor = "rgb(25,10,15)"; // background color
             document.body.style.color = "rgb(158, 158, 158)";
             document.documentElement.scrollTop = scrollPosition2;
           } else {
@@ -476,7 +492,7 @@
             scrollPosition2 = document.documentElement.scrollTop;
             journal2.classList.remove("active");
             journal1.classList.add("active");
-            document.body.style.backgroundColor = "rgb(25,10,15)"; // background color
+            document.body.style.backgroundColor = "rgb(17, 16, 22);"; // background color
             // document.body.style.color = "rgb(30,30,30)"; // text color
             document.documentElement.scrollTop = scrollPosition1;
           }
